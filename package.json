@@ -1,0 +1,19 @@
+{
+	"name": "solid-start-solid-rc-broken",
+	"type": "module",
+	"packageManager": "pnpm@10.17.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build"
+	},
+	"dependencies": {
+		"@tanstack/solid-router": "^1.132.2",
+		"@tanstack/solid-start": "^1.132.2",
+		"solid-js": "^1.9.9",
+		"vite": "^7.1.7",
+		"vite-plugin-solid": "^2.11.8"
+	},
+	"devDependencies": {
+		"typescript": "^5.9.2"
+	}
+}
