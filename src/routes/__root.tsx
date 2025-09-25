@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-import { createRootRoute, Outlet } from "@tanstack/solid-router"
+import { createRootRoute, Link, Outlet } from "@tanstack/solid-router"
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -21,5 +21,27 @@ export const Route = createRootRoute({
 })
 
 function RootComponent() {
-	return <Outlet />
+	return (
+		<>
+			<Link to="/">
+				Go to routes/index.tsx with {"<"}Link{">"}
+			</Link>
+			<br />
+
+			<a href="/app">
+				Go to routes/index.tsx with {"<"}a{">"}
+			</a>
+			<br />
+
+			<Link to="/sub">
+				Go to routes/sub.tsx with {"<"}Link{">"}
+			</Link>
+			<br />
+			<a href="/app/sub">
+				Go to routes/sub.tsx with {"<"}a{">"}
+			</a>
+			<div style={{ "margin-top": "20px" }} />
+			<Outlet />
+		</>
+	)
 }
