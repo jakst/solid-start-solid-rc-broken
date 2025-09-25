@@ -1,12 +1,6 @@
 /// <reference types="vite/client" />
 
-import {
-	createRootRoute,
-	HeadContent,
-	Outlet,
-	Scripts,
-} from "@tanstack/solid-router"
-import type { ParentProps } from "solid-js"
+import { createRootRoute, Outlet } from "@tanstack/solid-router"
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -27,23 +21,5 @@ export const Route = createRootRoute({
 })
 
 function RootComponent() {
-	return (
-		<RootDocument>
-			<Outlet />
-		</RootDocument>
-	)
-}
-
-function RootDocument({ children }: ParentProps) {
-	return (
-		<html>
-			<head>
-				<HeadContent />
-			</head>
-			<body>
-				{children}
-				<Scripts />
-			</body>
-		</html>
-	)
+	return <Outlet />
 }
