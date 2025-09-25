@@ -3,6 +3,7 @@ import { defineConfig } from "vite"
 import viteSolid from "vite-plugin-solid"
 
 export default defineConfig({
+	base: "/app",
 	server: {
 		port: 3000,
 	},
