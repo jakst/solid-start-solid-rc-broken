@@ -1,3 +1,4 @@
 .tanstack
+.wrangler
 node_modules
 dist
